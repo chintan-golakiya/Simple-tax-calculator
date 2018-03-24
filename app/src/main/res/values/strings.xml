@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GST calculate</string>
+    <string name="amtype">Amount type</string>
+    <string name="woutgst">Without GST</string>
+    <string name="withgst">With GST</string>
+    <string name="enamt">Enter value</string>
+    <string name="sper">Select percentage</string>
+    <string name="amt">Amount</string>
+    <string name="Cstr">CGST</string>
+    <string name="Sstr">SGST</string>
+    <string name="Tamt">Total Amount</string>
+    <string name="per5">5 %</string>
+    <string name="per12">12 %</string>
+    <string name="per15">18 %</string>
+    <string name="per18">28 %</string>
+
+</resources>

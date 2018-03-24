@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:visibility="visible"
+    tools:context="com.example.chintan.myapplication.MainActivity">
+
+
+    <TextView
+        android:id="@+id/txttax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtchamt"
+        android:layout_alignBottom="@+id/txtchamt"
+        android:layout_alignLeft="@+id/chper"
+        android:layout_alignStart="@+id/chper"
+        android:text="@string/sper"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <RadioGroup
+        android:id="@+id/chtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+
+        android:layout_marginTop="50dp"
+        android:checkedButton="@+id/radio0">
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/withgst" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/woutgst" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtchamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chtype"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/chtype"
+        android:layout_marginTop="33dp"
+        android:text="@string/amtype"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <RadioGroup
+        android:id="@+id/chper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:checkedButton="@+id/per12">
+
+        <RadioButton
+            android:id="@+id/per5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="@string/per5" />
+
+        <RadioButton
+            android:id="@+id/per12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="@string/per12" />
+
+        <RadioButton
+            android:id="@+id/per15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="@string/per15" />
+
+        <RadioButton
+            android:id="@+id/per18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="@string/per18" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chtype"
+        android:layout_alignStart="@+id/chtype"
+        android:layout_below="@+id/chper"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/enamt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <EditText
+        android:id="@+id/val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtval"
+        android:layout_alignStart="@+id/txtval"
+        android:layout_below="@+id/txtval"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/stramt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/val"
+        android:layout_alignStart="@+id/val"
+        android:layout_below="@+id/val"
+        android:layout_marginTop="22dp"
+        android:text="@string/amt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/valamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stramt"
+        android:layout_alignBottom="@+id/stramt"
+        android:layout_alignLeft="@+id/chper"
+        android:layout_alignStart="@+id/chper"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/cstr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stramt"
+        android:layout_alignStart="@+id/stramt"
+        android:layout_below="@+id/stramt"
+        android:layout_marginTop="22dp"
+        android:text="@string/Cstr"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/cval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cstr"
+        android:layout_alignLeft="@+id/valamt"
+        android:layout_alignStart="@+id/valamt"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/sstr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cstr"
+        android:layout_alignStart="@+id/cstr"
+        android:layout_below="@+id/cstr"
+        android:layout_marginTop="18dp"
+        android:text="@string/Sstr"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/sval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sstr"
+        android:layout_alignLeft="@+id/cval"
+        android:layout_alignStart="@+id/cval"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/strtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sstr"
+        android:layout_alignStart="@+id/sstr"
+        android:layout_below="@+id/sstr"
+        android:layout_marginTop="16dp"
+        android:text="@string/Tamt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/valtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sval"
+        android:layout_alignStart="@+id/sval"
+        android:layout_alignTop="@+id/strtotal"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/val"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/chper"
+        android:layout_toRightOf="@+id/chper"
+        android:text="OK" />
+
+</RelativeLayout>
