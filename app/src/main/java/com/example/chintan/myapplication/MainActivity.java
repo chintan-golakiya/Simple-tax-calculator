@@ -39,27 +39,38 @@ public class MainActivity extends AppCompatActivity {
         int radioid = radioGrouptype.getCheckedRadioButtonId();
         radioButtontype = findViewById(radioid);
         radioButtonper = findViewById(radioGrpper.getCheckedRadioButtonId());
-        Double val = Double.parseDouble(amount.getText().toString());
-        //textView =findViewById(R.id.valamt);
-        //textView.setText(val.toString());
-        StringTokenizer st = new StringTokenizer(radioButtonper.getText().toString());
-        int per = Integer.parseInt(st.nextToken());
-        if(radioid == R.id.radio0)
-        {
-            val = val/(100+per)*100;
+        String str = amount.getText().toString();
+        try {
+            Double val;
+            if (str == null) {
+                val = 0.0;
+            } else {
+                val = Double.parseDouble(str);
+            }
+            //textView =findViewById(R.id.valamt);
+            //textView.setText(val.toString());
+            StringTokenizer st = new StringTokenizer(radioButtonper.getText().toString());
+            int per = Integer.parseInt(st.nextToken());
+            if (radioid == R.id.radio0) {
+                val = val / (100 + per) * 100;
+            }
+            val = Math.round(val * 100.0) / 100.0;
+            Double cg = val * per / 200;
+            cg = Math.round(cg * 100.0) / 100.0;
+            Double total = val + (val * per / 100);
+            total = Math.round(total * 100.0) / 100.0;
+
+            textView = findViewById(R.id.valamt);
+            textView.setText(val.toString());
+            textView = findViewById(R.id.cval);
+            textView.setText(cg.toString());
+            textView = findViewById(R.id.sval);
+            textView.setText(cg.toString());
+            textView = findViewById(R.id.valtotal);
+            textView.setText(total.toString());
         }
-        val = Math.round(val*100.0)/100.0;
-        Double cg  = val*per/200;
-        cg = Math.round(cg*100.0)/100.0;
-        Double total = val + (val*per/100);
-        total = Math.round(total*100.0)/100.0;
-        textView = findViewById(R.id.valamt);
-        textView.setText(val.toString());
-        textView = findViewById(R.id.cval);
-        textView.setText(cg.toString());
-        textView = findViewById(R.id.sval);
-        textView.setText(cg.toString());
-        textView = findViewById(R.id.valtotal);
-        textView.setText(total.toString());
+        catch(Exception e)
+        {
+        }
     }
 }
